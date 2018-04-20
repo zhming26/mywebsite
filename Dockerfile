@@ -21,6 +21,7 @@ RUN echo "root:123.com" |chpasswd
 # Install Ngninx
 RUN yum install -y nginx
 ADD index.html /usr/share/nginx/html/index.html
+RUN chmod a+r -R /usr/share/nginx/html
 
 # Install Supervisord
 RUN yum install -y supervisor && \
